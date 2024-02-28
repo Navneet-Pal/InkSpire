@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const MyProfile = () => {
     const {data:session} = useSession();
     const [myposts, setmyposts] = useState([]);
     const router = useRouter();
@@ -55,4 +55,4 @@ const page = () => {
   )
 }
 
-export default page
+export default MyProfile
