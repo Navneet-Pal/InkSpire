@@ -9,8 +9,8 @@ const UpdatePrompt  = () => {
   const [post, setPost] = useState({ prompt: "", tag: "", });
   const [submitting, setIsSubmitting] = useState(false);
 
-  const router =useRouter();
-  const searchParams=useSearchParams();
+  const router = useRouter();
+  const searchParams = useSearchParams()
   const promptId = searchParams.get("id");
 
   useEffect(()=>{
@@ -32,7 +32,7 @@ const UpdatePrompt  = () => {
     if(!promptId) return alert("Missing PromptId!")
 
     try {
-      console.log("entert")
+      
       const response = await fetch(`/api/prompt/${promptId}`,{
         method:"PATCH",
         body:JSON.stringify({
@@ -40,7 +40,7 @@ const UpdatePrompt  = () => {
           tag:post.tag,
         }),
       });
-      console.log("bahar")
+      
       if(response.ok){
         router.push("/");
       }
