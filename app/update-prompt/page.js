@@ -11,7 +11,7 @@ const UpdatePrompt  = () => {
 
   const router = useRouter();
   const searchParams = useSearchParams()
-  const promptId = searchParams.get("id");
+  const promptId = searchParams.get("id") || null;
 
   useEffect(()=>{
     const getPromptDetails =async ()=>{
