@@ -11,7 +11,7 @@ export const dbConnect = async()=>{
     }
     
     try {
-        await mongoose.connect(process.env.DB_URI,{
+        await mongoose.connect(process.env.MONGODB_URI,{
             dbName: "inkspire",
             useNewUrlParser:true,
             useUnifiedTopology:true,
