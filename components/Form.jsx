@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
 
@@ -22,7 +23,7 @@ const Form = ({ type, post, setPost, submitting, submitHandler }) => {
                 <span className='font-satoshi font-semibold text-base text-gray-700'>Your AI Prompt</span>
                 <textarea 
                     value={post.prompt}
-                    onChange={(e)=> setPost({...post, prompt:e.target.value})}
+                    onChange={(e)=> setPost({prompt:e.target.value, ...post })}
                     placeholder='Write your post here'
                     required
                     className='form_textarea '
