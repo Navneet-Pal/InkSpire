@@ -1,7 +1,6 @@
 "use client"
 import Form from '@components/Form'
 import { useRouter, useSearchParams } from 'next/navigation';
-import React from 'react'
 import { useState,useEffect } from 'react';
 
 const UpdatePrompt  = () => {
@@ -11,7 +10,7 @@ const UpdatePrompt  = () => {
 
   const router = useRouter();
   const searchParams = useSearchParams()
-  const promptId = searchParams.get("id") || null;
+  const promptId = searchParams.get("id");
 
   useEffect(()=>{
     const getPromptDetails =async ()=>{
