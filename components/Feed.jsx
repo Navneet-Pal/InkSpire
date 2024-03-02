@@ -56,7 +56,7 @@ const Feed = () => {
   return (
     <div className="feed">
 
-      <form >
+      <form className='relative w-full flex-center'>
         <input
           type="text"
           name="searchbar"
